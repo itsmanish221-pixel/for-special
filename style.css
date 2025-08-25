@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating Hearts Background */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    color: #ff69b4;
+    font-size: 20px;
+    animation: float 6s infinite linear;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 50px;
+}
+
+.birthday-card {
+    background: rgba(212, 145, 145, 0.95);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: cardAppear 2s ease-out;
+}
+
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #e91e63;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        text-shadow: 2px 2px 20px rgba(233, 30, 99, 0.5);
+    }
+}
+
+.love-title {
+    font-size: 1.8rem;
+    color: #6a4c93;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Animated Cake */
+.cake-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cake {
+    width: 80px;
+    height: 60px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border-radius: 10px 10px 5px 5px;
+    position: relative;
+    animation: bounce 2s infinite;
+}
+
+.cake::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    right: 10px;
+    height: 15px;
+    background: #da7a7a;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.candle {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 15px;
+    background: #ff6b6b;
+    border-radius: 2px;
+}
+
+.flame {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 12px;
+    background: radial-gradient(circle, #ffa500 0%, #ff4500 70%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1.1) rotate(2deg);
+    }
+}
+
+.birthday-message {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 30px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.celebrate-btn {
+    background: linear-gradient(45deg, #ff6b6b, #e91e63);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+.celebrate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+}
+
+/* Messages Section */
+.messages-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.messages-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: rgb(113, 15, 210);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.message-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.message-card {
+    background: rgba(220, 163, 233, 0.911);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.message-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.message-card h3 {
+    color: #e91e63;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.message-card p {
+    color: #000000;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Photo Gallery */
+.gallery-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: rgb(194, 42, 42);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.photo-item {
+    background: rgb(206, 175, 192);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.photo-item p {
+    padding: 20px;
+    color: #666;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Countdown Section */
+.countdown-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.countdown-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: rgb(47, 228, 34);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.love-counter {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.counter-item {
+    background: rgba(198, 162, 222, 0.9);
+    border-radius: 15px;
+    padding: 30px 20px;
+    min-width: 150px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.counter-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.counter-label {
+    color: #000000;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Final Section */
+.final-section {
+    margin: 60px 0 40px;
+    text-align: center;
+}
+
+.final-message h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: rgb(45, 110, 231);
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.birthday-cake-interactive {
+    background: rgba(198, 208, 238, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.interactive-cake {
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border-radius: 15px 15px 8px 8px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.interactive-cake::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    right: 15px;
+    height: 20px;
+    background: #d32020;
+    border-radius: 50px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.birthday-candles {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.candle-flame {
+    width: 6px;
+    height: 20px;
+    background: #ff6b6b;
+    border-radius: 3px;
+    position: relative;
+}
+
+.candle-flame::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 15px;
+    background: radial-gradient(circle, #ffa500 0%, #ff4500 70%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 1s infinite alternate;
+}
+
+.candle-flame.blown::after {
+    display: none;
+}
+
+.blow-candles-btn {
+    background: linear-gradient(45deg, #6a4c93, #9b59b6);
+    color: rgb(6, 255, 255);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(106, 76, 147, 0.3);
+}
+
+.blow-candles-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(106, 76, 147, 0.4);
+}
+
+.closing-message {
+    color: rgb(87, 102, 243);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .love-title {
+        font-size: 1.4rem;
+    }
+    
+    .message-cards, .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .love-counter {
+        gap: 20px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .birthday-card, .birthday-cake-interactive {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .messages-section h2, 
+    .gallery-section h2, 
+    .countdown-section h2, 
+    .final-message h2 {
+        font-size: 2rem;
+    }
+    
+    .counter-item {
+        min-width: 120px;
+        padding: 20px 15px;
+    }
+    
+    .counter-number {
+        font-size: 2rem;
+}
+}
