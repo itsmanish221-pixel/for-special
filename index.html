@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="birthday-card">
+                <h1 class="main-title">Happy Birthday Churuniii</h1>
+                <h2 class="love-title">My Gergeous Dhana! 💖</h2>
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="candle"></div>
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <p class="birthday-message">
+                    Today is all about celebrating Dimpi and the incredible person you are. 
+                    I'm so grateful to have you 💞 in my life! ✨
+                </p>
+                <button class="celebrate-btn" onclick="celebrate()">🎉 Start Celebration Baby!</button>
+            </div>
+        </section>
+
+        <!-- Love Messages Section -->
+        <section class="messages-section">
+            <h2>My Love Letters to You 💌</h2>
+            <div class="message-cards">
+                <div class="message-card">
+                    <h3>Why I Love You?</h3>
+                    <p>Sereously i don't know properly why i Love u 🙄 But-Your smile brightens my darkest days, your laugh is music to my ears, your Shout is my sukkon to my Heart 
+                    and your unspeakable & indirect love makes everything in life worth it. You are sunshine like Heaven! ☀</p>
+                </div>
+                <div class="message-card">
+                    <h3>Our Memories</h3>
+                    <p>From our first date to all the adventures we've shared, every moment 
+                    with you has a treasure. Here's to We creating many more beautiful memories! 🌸</p>
+                </div>
+                <div class="message-card">
+                    <h3>My Birthday Wish for You</h3>
+                    <p>May Every year of your life be filled with joy, success, love, and 
+                    all the happiness you bring to others every day. You deserve the world! 🌍</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section">
+            <h2>Our Beautiful Journey Together 📸</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="https://ik.imagekit.io/vzj2tytqf/dm2.jpg?updatedAt=1755973529177/ "alt="Photo"/>
+                    <p>She Looks so Gergeous 🥰😍</p>
+                </div>
+                <div class="photo-item">
+                    <img src="https://ik.imagekit.io/vzj2tytqf/dm3.jpg?updatedAt=1755973655928/ "alt="photo"/>
+                    <p>First Secretly Meet💕</p>
+                </div>
+                <div class="photo-item">
+                    <img src=" https://ik.imagekit.io/vzj2tytqf/dm1.jpg?updatedAt=1755973439402/ "alt="photo"/>
+                    <p>Her Eyes melts my Heart 💞</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Birthday Countdown -->
+        <section class="countdown-section">
+            <h2>Time We've Been Together ⏰</h2>
+            <div class="love-counter">
+                <div class="counter-item">
+                    <span class="counter-number" id="days">0</span>
+                    <span class="counter-label">Days of Love</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="hours">0</span>
+                    <span class="counter-label">Hours of Joy</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="minutes">0</span>
+                    <span class="counter-label">Minutes of Happiness</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Wish Button -->
+        <section class="final-section">
+            <div class="final-message">
+                <h2>Make a Wish Loo! 🌟</h2>
+                <div class="birthday-cake-interactive">
+                    <div class="interactive-cake">
+                        <div class="cake-layers"></div>
+                        <div class="birthday-candles">
+                            <div class="candle-flame" id="flame1"></div>
+                            <div class="candle-flame" id="flame2"></div>
+                            <div class="candle-flame" id="flame3"></div>
+                        </div>
+                    </div>
+                    <button class="blow-candles-btn" onclick="blowCandles()">💨 Blow the Candles Dhana</button>
+                </div>
+                <p class="closing-message">
+                    I love you Churuniii more than words I can't express Atonce. Happy Birthday, my darlu! 
+                    Here's to A year of our beautiful love story! 💕👑
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+
+    <!-- Audio -->
+    <audio controls autoplay loop>
+        <source src="Tum Ho Toh - PagalWorld.mp3" type="audio/mp3">
+       
+
+    </audio>
+</body>
+</html>
